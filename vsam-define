@@ -1,0 +1,26 @@
+//STEP1 EXEC PGM=IDCAMS                            
+ DELETE -                                          
+    TMTI.SXC0.DGQE.PRODC.OPACBLLT                  
+ SET MAXCC = 0                                     
+ DEFINE CLUSTER -                                  
+    (NAME(TMTI.SXC0.DGQE.PRODC.OPACBLLT) -         
+    VOLUME(STOR38) -                               
+    RECORDSIZE(0130 0130) -                        
+    CYLINDERS(002 001) -                           
+    FREESPACE(10 10) -                             
+    NOIMBED -                                      
+    SPEED -                                        
+    INDEXED -                                      
+    REUSE -                                        
+    KEYS(34 0) -                                   
+    OWNER(PA) -                                    
+    SHAREOPTIONS(2 3)) -                           
+ DATA -                                            
+    (NAME(TMTI.SXC0.DGQE.PRODC.OPACBLLT.DATA) -    
+    CONTROLINTERVALSIZE(8192)) -                        
+ INDEX -                                                
+    (NAME(TMTI.SXC0.DGQE.PRODC.OPACBLLT.INDEX) -        
+    CONTROLINTERVALSIZE(1024))                          
+/*                                                      
+//SYSPRINT  DD SYSOUT=*                                 
+//SYSOUT  DD SYSOUT=*                                   
