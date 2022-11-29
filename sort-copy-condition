@@ -4,6 +4,9 @@
 //SORTOUT  DD DSN=OUTPUT.DATASET.BHAVIT,DISP=(NEW,CATLG,DELETE),    
 //         DCB=*.SORTIN,UNIT=SYSDA,SPACE=(CYL,(1,1),RLSE)          
 //SYSIN    DD *                                                    
-  SORT FIELDS=COPY                                                 
+  SORT FIELDS=COPY  /* WRITES TO A FILE WITHOUT SORTING JUST BASED ON THE CONDITION */
+  INCLUDE COND=(19,1,CH,EQ,C'P') 
+  |OR|  
+  SORT FIELDS =(1,4,CH,A) /* SORTS IN ASSCENDING ORDER AND THEN WRITES TO ANOTHER FILE BASED ON THE CONDITION*/                                            
   INCLUDE COND=(19,1,CH,EQ,C'P')                                   
 /*                                                                 
