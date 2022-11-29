@@ -1,0 +1,5 @@
+//STEP1    EXEC PGM=IDCAMS                
+//SYSPRINT DD   SYSOUT=A                  
+//SYSIN    DD   *                             
+     DELETE BHAVIT.MYGDG.TEST GDG           
+/*                                        
