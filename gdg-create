@@ -1,0 +1,9 @@
+//STEP1    EXEC PGM=IDCAMS                  
+//SYSPRINT DD   SYSOUT=A                    
+//SYSIN    DD   *                                                                         
+     DEFINE GDG -                           
+           (NAME(BHAVIT.NEW.GDG) -        
+           EMPTY -                          
+           NOSCRATCH -                      
+           LIMIT(15))                       
+/*                                          
