@@ -1,0 +1,9 @@
+//STEP1    EXEC PGM=SORT                                           
+//SYSOUT   DD SYSOUT=*                                             
+//SORTIN   DD DSN=INPUT.DATASET.BHAVIT,DISP=SHR       
+//SORTOUT  DD DSN=OUTPUT.DATASET.BHAVIT,DISP=(NEW,CATLG,DELETE),    
+//         DCB=*.SORTIN,UNIT=SYSDA,SPACE=(CYL,(1,1),RLSE)          
+//SYSIN    DD *                                                    
+  SORT FIELDS=COPY                                                 
+  INCLUDE COND=(19,1,CH,EQ,C'P')                                   
+/*                                                                 
