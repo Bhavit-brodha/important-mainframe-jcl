@@ -1,0 +1,10 @@
+//STEP1  EXEC PGM=IDCAMS,REGION=1000K                                   
+//SYSPRINT DD SYSOUT=*                                                  
+//SYSOUT   DD SYSOUT=*                                                  
+//SYSUT1   DD DSN=VSAM.FILE.ONE,DISP=SHR                
+//SYSUT2   DD DSN=VSAM.FILE.TWO,DISP=SHR                
+//SYSIN    DD *                                                         
+ REPRO INFILE(SYSUT1) OUTFILE(SYSUT2) REPLACE                                 
+/*                                                                      
+//SYSPRINT  DD SYSOUT=*                                                 
+//SYSOUT  DD SYSOUT=*                                                   
