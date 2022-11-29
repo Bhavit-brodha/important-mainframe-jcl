@@ -1,0 +1,9 @@
+//STEP1 EXEC PGM=IDCAMS                    
+//SYSPRINT DD SYSOUT=*                     
+//SYSIN    DD *                            
+  DEFINE CLUSTER( -                        
+         NAME('NEW.VSAM.FILE') -      
+         MODEL('MODEL.VSAM.FILE'))  -   
+  DATA ( -                                 
+    NAME('NEW.VSAM.FILE.DATA'))       
+/*                                         
